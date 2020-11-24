@@ -34,15 +34,15 @@ AUTH_SOURCE = auth_source
 
 ## Data set 
 
-Atlas provides sample data you can load into your Atlas clusters.\
-To utilize the sample data provided by Atlas, you must create an Atlas cluster to load data into.\
-To get started with Atlas : https://docs.atlas.mongodb.com/getting-started/\
-Then load sample data : https://docs.atlas.mongodb.com/sample-data/\
+Atlas provides sample data you can load into your Atlas clusters.
+To utilize the sample data provided by Atlas, you must create an Atlas cluster to load data into.
+To get started with Atlas : https://docs.atlas.mongodb.com/getting-started/
+Then load sample data : https://docs.atlas.mongodb.com/sample-data/
 
 I created a cluster named "cluster0" (default name when following the step while getting started with Atlas) 
-and loaded all the sample datasets. \
+and loaded all the sample datasets. 
 I now have several databases including : sample_restaurants, containing two collections : 
-neighborhood and restaurants.\
+neighborhood and restaurants.
 Now I will focus on restaurants collection.
 
 The data must look like :
@@ -106,10 +106,10 @@ In postgreSQL, I now have table "restaurants" in my database "pg_sample_restaura
 
 ## From postgreSQL to mongoDB
 
-I load every sample from the table "restaurants" into a new dataframe using my sql_manager.\
+I load every sample from the table "restaurants" into a new dataframe using my sql_manager.
 Then, I do the opposite transformation than the one from mongo_atlas.getDf (which Normalize semi-structured JSON data into a flat table),
 to transform my data frame into a list of JSON documents, using method dfToJsonList from MongoDB object.
-This transformation requires a specific schema to parse the data frame into a list of JSON.\
+This transformation requires a specific schema to parse the data frame into a list of JSON.
 Finally I insert this list into local mongoDB using insert method.
 
 ```python
