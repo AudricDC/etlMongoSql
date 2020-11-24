@@ -92,7 +92,7 @@ mongo_local = MongoDB(database="sample_restaurants", collection="restaurants", c
 ## From Atlas to postgreSQL
 
 I load the first 100 records from Atlas restaurants into a data frame, using my mongo_atlas object,
-and then I load it into a postgreSQL table name "restaurants" using my sql_manager. 
+and then I load it into a postgreSQL table named "restaurants" using my sql_manager. 
 
 ```python
 mongo_df = mongo_atlas.getDf('grades', ['name', 'cuisine', ['address', 'building'], ['address', 'street'], ['address', 'zipcode']], nb_records=100)
